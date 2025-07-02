@@ -65,7 +65,7 @@ app.get('/api/tabs', authenticate, async (req: Request, res: Response) => {
     if (!WEBHOOK_URL) {
       throw new Error('WEBHOOK_URL is not set');
     }
-
+    await fetch(WEBHOOK_URL);
     // Wait for the POST req to arrive with a timeout
     await new Promise<void>((resolve, reject) => {
       resolvePostPromise = resolve;

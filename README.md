@@ -55,6 +55,7 @@ npm install
 
 ### 4. Configure Environment Variables
 Create .env files for both the server and client.
+
 Server:
 ```bash
 AUTH_TOKEN=your-auth-token
@@ -80,4 +81,14 @@ npm run dev
 cd ../client
 npm run dev
 ```
-The React app will be available at http://localhost:5173.
+### The React app will be available at http://localhost:5173.
+---
+
+## iOS Shortcut Setup
+- Download the iOS shortcut from this link - https://www.icloud.com/shortcuts/6698774288da493bb213f154c370f5ac
+- Replace <your-server-ip> in the POST request to the IP address of you server.
+- In the Authorization header of the request, replace <your-auth-token> with your token (the one used in the .env files).
+- Install Pushcut from the iOS app store and create a notification.
+- Under the "Actions" tab add the iOS shortcut.
+
+NOTE: Make sure both your phone and server are on the same local network.
